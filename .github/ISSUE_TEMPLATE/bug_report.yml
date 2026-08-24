@@ -23,7 +23,7 @@ body:
     id: mod_version
     attributes:
       label: Mod version
-      placeholder: "0.1.0"
+      placeholder: "0.9.0"
     validations:
       required: true
 
@@ -43,7 +43,6 @@ body:
         - Fabric
         - Forge
         - NeoForge
-        - Quilt
         - Other
     validations:
       required: true
@@ -52,7 +51,7 @@ body:
     id: loader_version
     attributes:
       label: Loader version
-      placeholder: "Fabric Loader 0.19.3"
+      placeholder: "Fabric Loader 0.19.6"
     validations:
       required: true
 
@@ -96,20 +95,12 @@ body:
       required: true
 
   - type: textarea
-    id: expected
-    attributes:
-      label: Expected behavior
-      description: What should have happened?
-    validations:
-      required: true
-
-  - type: textarea
     id: logs
     attributes:
       label: Logs or crash report
       description: Drag and drop latest.log or a crash report here. You may also provide a link.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: other_mods
@@ -129,7 +120,7 @@ body:
     id: operating_system
     attributes:
       label: Operating system
-      placeholder: "Windows 11, Linux, or macOS"
+      placeholder: "Windows, Linux, macOS"
 
   - type: checkboxes
     id: confirmation
