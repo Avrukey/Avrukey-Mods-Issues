@@ -1,1 +1,144 @@
+name: Bug report
+description: Report a bug, crash, compatibility issue, or incorrect mod behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem.
+        Please provide enough information to reproduce and investigate the issue.
 
+  - type: input
+    id: project
+    attributes:
+      label: Mod name
+      description: Which mod is affected?
+      placeholder: "Final Checklist"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: Minecraft version
+      placeholder: "1.21.7"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod loader
+      options:
+        - Fabric
+        - Forge
+        - NeoForge
+        - Quilt
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: loader_version
+    attributes:
+      label: Loader version
+      placeholder: "Fabric Loader 0.19.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      options:
+        - Crash
+        - Mod does not load
+        - Feature does not work
+        - Incorrect behavior
+        - Rendering or visual problem
+        - User interface problem
+        - Compatibility problem
+        - Performance problem
+        - Translation problem
+        - Multiplayer or server problem
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Explain what happened and which feature is affected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the game.
+        2. Open or create a world.
+        3. Use the affected feature.
+        4. The problem occurs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or crash report
+      description: Drag and drop latest.log or a crash report here. You may also provide a link.
+    validations:
+      required: true
+
+  - type: textarea
+    id: other_mods
+    attributes:
+      label: Other installed mods
+      description: List other installed mods. Write "None" if no other mods were installed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video
+      description: Attach screenshots or video if they help demonstrate the problem.
+
+  - type: input
+    id: operating_system
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11, Linux, or macOS"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I downloaded the mod from its official CurseForge or Modrinth page.
+          required: true
+        - label: I am using a file compatible with my Minecraft version and mod loader.
+          required: true
+        - label: I searched existing issues and did not find the same report.
+          required: true
