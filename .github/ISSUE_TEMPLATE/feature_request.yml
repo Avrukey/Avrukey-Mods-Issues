@@ -20,15 +20,7 @@ body:
       description: Describe the feature or improvement.
     validations:
       required: true
-
-  - type: textarea
-    id: reason
-    attributes:
-      label: Why would this be useful?
-      description: Explain what problem this feature would solve.
-    validations:
-      required: true
-
+      
   - type: textarea
     id: implementation
     attributes:
@@ -40,11 +32,3 @@ body:
     attributes:
       label: Additional information
       description: Add screenshots, examples, mockups, or relevant links.
-
-  - type: checkboxes
-    id: confirmation
-    attributes:
-      label: Confirmation
-      options:
-        - label: I searched existing issues and did not find the same suggestion.
-          required: true
