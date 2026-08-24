@@ -1,1 +1,50 @@
+name: Feature request
+description: Suggest a new feature or improvement for one of Avrukey's mods.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Mod name
+      description: Which mod is this suggestion for?
+      placeholder: "Final Checklist"
+    validations:
+      required: true
 
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature description
+      description: Describe the feature or improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why would this be useful?
+      description: Explain what problem this feature would solve.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggested implementation
+      description: Optional. Explain how you think the feature could work.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add screenshots, examples, mockups, or relevant links.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and did not find the same suggestion.
+          required: true
